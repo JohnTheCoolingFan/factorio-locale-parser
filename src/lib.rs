@@ -1,6 +1,7 @@
 use std::{collections::HashMap, io::Read, ops::Index};
 use thiserror::Error;
 
+// TODO: Special type for value that automatically finds substitute fields
 /// Holds a key-value pairs for locale entries from locale file
 #[derive(Debug)]
 pub struct LocaleFile {
