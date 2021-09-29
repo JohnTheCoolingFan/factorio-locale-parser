@@ -25,7 +25,7 @@ impl LocaleFile {
 
         reader.read_to_string(&mut buf).map_err(|_| LocaleError::FilesystemError)?;
 
-        let lines: Vec<&str> = buf.as_str().split('\n').collect();
+        let lines: Vec<&str> = buf.split('\n').collect();
         let mut current_section = "";
         let mut result = Self{entries: HashMap::new()};
         for line in lines {
